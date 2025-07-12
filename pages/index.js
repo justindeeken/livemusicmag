@@ -26,7 +26,7 @@ export default function Home({ posts }) {
   color: '#ff2e63', // Bright pink-red for vibrancy
   textTransform: 'uppercase', // All caps for intensity
   textShadow: '3px 3px 6px rgba(0, 0, 0, 0.5)', // Stronger shadow
-  letterSpacing: '0.1em', // Wider spacing for emphasis so much
+  letterSpacing: '0.1em', // Wider spacing for emphasis so much more
   marginBottom: '0.5rem' 
 }}>
   {post.title}
@@ -45,3 +45,6 @@ export default function Home({ posts }) {
     </main>
   )
 }
+
+
+
