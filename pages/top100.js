@@ -35,7 +35,7 @@ export default function Top100Page({ data }) {
       <ol>
         {data.songs?.map((song, index) => (
           <li key={index}>
-            #{index + 1} {song.artist} — {song.title}
+            #{index + 1} {song.artist} — {song.title} -{song.genre} - {song.key} - {song.chords} - {song.producer}
           </li>
         ))}
       </ol>
