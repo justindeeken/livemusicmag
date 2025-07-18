@@ -7,7 +7,11 @@ const query = groq`
     description,
     songs[] {
       artist,
-      title
+      title,
+      genre,
+      key,
+      chords,
+      producer
     },
     lastUpdated
   }
