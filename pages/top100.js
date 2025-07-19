@@ -46,5 +46,3 @@ export default function Top100Page({ data }) {
         </p>
       )}
     </main>
-  )
-}
