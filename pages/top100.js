@@ -11,7 +11,8 @@ const query = groq`
       genre,
       key,
       chords,
-      producer
+      producer,
+      year
     },
     lastUpdated
   }
@@ -35,7 +36,7 @@ export default function Top100Page({ data }) {
       <ol>
         {data.songs?.map((song, index) => (
           <li key={index}>
-            #{index + 1} {song.artist} — {song.title} -{song.genre} - {song.key} - {song.chords} - {song.producer}
+            #{index + 1} {song.artist} — {song.title} -{song.genre} - {song.key} - {song.chords} - {song.producer} - {song.year}
           </li>
         ))}
       </ol>
