@@ -29,7 +29,6 @@ export async function getStaticProps() {
   }
 }
 
-import { useState } from 'react'
 
 export default function Top100Page({ data }) {
   const [groupBy, setGroupBy] = useState(null)
