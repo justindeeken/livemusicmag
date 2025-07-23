@@ -58,6 +58,7 @@ export default function Top100Page({ data }) {
         <button onClick={() => setGroupBy('year')}>Year</button>{' '}
         <button onClick={() => setGroupBy('producer')}>Producer</button>{' '}
         <button onClick={() => setGroupBy('key')}>Key</button>{' '}
+	<button onClick={() => setGroupBy('chords')}>Chords</button>{' '}
         <button onClick={() => setGroupBy(null)}>None</button>
       </div>
 
