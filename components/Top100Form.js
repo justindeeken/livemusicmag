@@ -119,11 +119,13 @@ export default function Top100Form() {
         </div>
       )}
 
-      <ul className="list-decimal ml-4 mb-4">
-        {songs.map((s, i) => (
-          <li key={i}>{s}</li>
-        ))}
-      </ul>
+<ol className="list-decimal ml-4 mb-4">
+  {songs.map((s, i) => (
+    <li key={i}>
+      <span className="font-semibold mr-1">#{i + 1}</span> {s}
+    </li>
+  ))}
+</ol>
 
       <button
         className="bg-green-600 text-white px-6 py-2 rounded"
