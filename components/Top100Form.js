@@ -13,6 +13,7 @@ export default function Top100Form() {
   const [masterSongs, setMasterSongs] = useState([]);
   const [suggestions, setSuggestions] = useState([]);
   const [error, setError] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
 
   useEffect(() => {
     const fetchSongs = async () => {
@@ -77,10 +78,11 @@ export default function Top100Form() {
     timestamp: Date.now(),
   });
 
-  setError('');
-  alert('List saved successfully!');
-  setListName('');
-  setSongs([]);
+setSuccessMessage(
+  `List saved! You can view your list at /lists/${normalizedListName}`
+);
+setListName('');
+setSongs([]);
 };
 
   return (
@@ -127,15 +129,28 @@ export default function Top100Form() {
   ))}
 </ol>
 
-      <button
-        className="bg-green-600 text-white px-6 py-2 rounded"
-        onClick={handleSubmit}
-        disabled={songs.length === 0}
-      >
-        Submit List
-      </button>
+<button
+  className="bg-green-600 text-white px-6 py-2 rounded"
+  onClick={handleSubmit}
+  disabled={songs.length === 0}
+>
+  Submit List
+</button>
 
-      {error && <p className="text-red-600 mt-2">{error}</p>}
+{error && <p className="text-red-600 mt-2">{error}</p>}
+
+{successMessage && (
+  <p className="text-green-700 mt-4">
+    ✅ {successMessage}{' '}
+    <a
+      className="underline text-blue-600"
+      href={`/lists/${listName.trim().toLowerCase()}`}
+    >
+      View it here
+    </a>
+  </p>
+)}
+
     </div>
   );
 }
