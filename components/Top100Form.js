@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { db } from '../lib/firebase';
 import { collection, getDocs, addDoc, doc, getDoc, setDoc } from 'firebase/firestore';
 import Fuse from 'fuse.js';
-import Filter from 'bad-words';
+import { Filter } from 'bad-words';
 
 const filter = new Filter();
 
